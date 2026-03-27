@@ -1,203 +1,402 @@
-/* ===== SKYBLUE CUSTOM THEME ===== */
+/* ===== SKYBLUE - Things Theme Companion ===== */
 
-/* --- Accent colors --- */
-:root {
+/* --- Override Things accent to sky blue palette --- */
+.theme-dark {
   --accent-h: 204;
   --accent-s: 64%;
   --accent-l: 58%;
+  --interactive-accent: #4ea8de;
+  --interactive-accent-hover: #7dcfff;
+  --text-accent: #4ea8de;
+  --text-accent-hover: #7dcfff;
+
+  /* Background tweaks - slightly cooler dark */
+  --background-primary: #1e1e2e;
+  --background-primary-alt: #181825;
+  --background-secondary: #11111b;
+  --background-secondary-alt: #0d0d14;
+  --background-modifier-border: rgba(78, 168, 222, 0.1);
 }
 
-/* --- Headings --- */
+/* --- Headings - colorful gradient palette --- */
 .theme-dark {
   --h1-color: #4ea8de;
-  --h2-color: #64b5f6;
-  --h3-color: #81c784;
-  --h4-color: #ce93d8;
-  --h5-color: #ffb74d;
-  --h6-color: #ef9a9a;
+  --h2-color: #74c7ec;
+  --h3-color: #a6e3a1;
+  --h4-color: #cba6f7;
+  --h5-color: #fab387;
+  --h6-color: #f38ba8;
 }
 
-.markdown-rendered h1,
-.cm-header-1 {
+/* H1 with subtle glow line */
+body .markdown-rendered h1,
+body .cm-header-1 {
   color: var(--h1-color) !important;
-  font-weight: 700;
-  border-bottom: 1px solid rgba(78, 168, 222, 0.2);
-  padding-bottom: 6px;
+  font-weight: 700 !important;
+  font-size: 1.8em !important;
+  border-bottom: 2px solid rgba(78, 168, 222, 0.25);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
 }
 
-.markdown-rendered h2,
-.cm-header-2 {
+body .markdown-rendered h2,
+body .cm-header-2 {
   color: var(--h2-color) !important;
-  font-weight: 600;
+  font-weight: 650 !important;
+  font-size: 1.5em !important;
+  margin-top: 28px;
 }
 
-.markdown-rendered h3,
-.cm-header-3 {
+body .markdown-rendered h3,
+body .cm-header-3 {
   color: var(--h3-color) !important;
-  font-weight: 600;
+  font-weight: 600 !important;
+  font-size: 1.25em !important;
 }
 
-.markdown-rendered h4,
-.cm-header-4 {
+body .markdown-rendered h4,
+body .cm-header-4 {
   color: var(--h4-color) !important;
-}
-
-.markdown-rendered h5,
-.cm-header-5 {
-  color: var(--h5-color) !important;
-}
-
-.markdown-rendered h6,
-.cm-header-6 {
-  color: var(--h6-color) !important;
-}
-
-/* --- Tags with color --- */
-.tag {
-  background-color: rgba(78, 168, 222, 0.15) !important;
-  color: #4ea8de !important;
-  border: 1px solid rgba(78, 168, 222, 0.3) !important;
-  border-radius: 4px !important;
-  padding: 1px 8px !important;
-  font-size: 0.85em !important;
-}
-
-/* --- Blockquotes --- */
-.markdown-rendered blockquote,
-.cm-quote {
-  border-left: 3px solid #4ea8de !important;
-  background-color: rgba(78, 168, 222, 0.05);
-  padding: 4px 12px;
-  border-radius: 0 4px 4px 0;
-}
-
-/* --- Code blocks --- */
-.theme-dark code[class*="language-"],
-.theme-dark pre[class*="language-"],
-.markdown-rendered pre {
-  background-color: #1a1b26 !important;
-  border: 1px solid rgba(78, 168, 222, 0.15);
-  border-radius: 8px;
-}
-
-.markdown-rendered code:not(pre code) {
-  background-color: rgba(78, 168, 222, 0.1) !important;
-  color: #7dcfff !important;
-  border-radius: 4px;
-  padding: 2px 5px;
-}
-
-/* --- Checkboxes --- */
-input[type="checkbox"]:checked {
-  background-color: #4ea8de !important;
-  border-color: #4ea8de !important;
-}
-
-/* --- Links --- */
-.theme-dark {
-  --link-color: #4ea8de;
-  --link-color-hover: #7dcfff;
-  --link-external-color: #bb9af7;
-  --link-external-color-hover: #d0b8ff;
-}
-
-/* --- Sidebar / File explorer --- */
-.nav-folder-title {
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.nav-file-title:hover,
-.nav-folder-title:hover {
-  background-color: rgba(78, 168, 222, 0.1) !important;
-  border-radius: 4px;
-}
-
-.nav-folder-title.is-active {
-  background-color: rgba(78, 168, 222, 0.15) !important;
-  border-radius: 4px;
-}
-
-/* --- Tables --- */
-.markdown-rendered table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.markdown-rendered th {
-  background-color: rgba(78, 168, 222, 0.15) !important;
-  color: #4ea8de !important;
-  font-weight: 600;
-  border-bottom: 2px solid rgba(78, 168, 222, 0.3) !important;
-}
-
-.markdown-rendered td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-}
-
-.markdown-rendered tr:hover td {
-  background-color: rgba(78, 168, 222, 0.05) !important;
-}
-
-/* --- Scrollbar --- */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(78, 168, 222, 0.3);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(78, 168, 222, 0.5);
-}
-
-/* --- Callouts / Admonitions --- */
-.callout[data-callout="info"] {
-  --callout-color: 78, 168, 222;
-}
-
-.callout[data-callout="tip"] {
-  --callout-color: 129, 199, 132;
-}
-
-.callout[data-callout="warning"] {
-  --callout-color: 255, 183, 77;
-}
-
-.callout[data-callout="danger"] {
-  --callout-color: 239, 154, 154;
-}
-
-/* --- Smooth transitions --- */
-.nav-file-title,
-.nav-folder-title,
-.tag,
-a.internal-link,
-a.external-link {
-  transition: all 0.15s ease;
-}
-
-/* --- Kanban improvements --- */
-.kanban-plugin__board {
-  background: transparent !important;
-}
-
-.kanban-plugin__lane {
-  background-color: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(78, 168, 222, 0.15) !important;
-  border-radius: 8px !important;
-}
-
-.kanban-plugin__lane-title-text {
-  color: #4ea8de !important;
   font-weight: 600 !important;
 }
 
-/* --- Dataview tables --- */
-.dataview.table-view-table th {
-  background-color: rgba(78, 168, 222, 0.15) !important;
+body .markdown-rendered h5,
+body .cm-header-5 {
+  color: var(--h5-color) !important;
+}
+
+body .markdown-rendered h6,
+body .cm-header-6 {
+  color: var(--h6-color) !important;
+}
+
+/* --- Tags - pill style with glow --- */
+body .tag {
+  background-color: rgba(78, 168, 222, 0.12) !important;
+  color: #74c7ec !important;
+  border: 1px solid rgba(78, 168, 222, 0.25) !important;
+  border-radius: 12px !important;
+  padding: 2px 10px !important;
+  font-size: 0.82em !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+body .tag:hover {
+  background-color: rgba(78, 168, 222, 0.25) !important;
   color: #4ea8de !important;
+  box-shadow: 0 0 8px rgba(78, 168, 222, 0.2);
+}
+
+/* --- Blockquotes - clean accent bar --- */
+body .markdown-rendered blockquote {
+  border-left: 3px solid #4ea8de !important;
+  background-color: rgba(78, 168, 222, 0.04) !important;
+  padding: 8px 16px !important;
+  border-radius: 0 6px 6px 0 !important;
+  margin: 12px 0 !important;
+}
+
+/* --- Code blocks - Tokyo Night inspired --- */
+body .markdown-rendered pre,
+body .cm-s-obsidian .HyperMD-codeblock {
+  background-color: #11111b !important;
+  border: 1px solid rgba(78, 168, 222, 0.12) !important;
+  border-radius: 8px !important;
+}
+
+body .markdown-rendered code:not(pre code),
+body .cm-inline-code {
+  background-color: rgba(78, 168, 222, 0.08) !important;
+  color: #89dceb !important;
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  font-size: 0.9em !important;
+}
+
+/* --- Links --- */
+body .theme-dark {
+  --link-color: #4ea8de;
+  --link-color-hover: #89dceb;
+  --link-external-color: #cba6f7;
+  --link-external-color-hover: #d0b8ff;
+  --link-unresolved-color: rgba(78, 168, 222, 0.45);
+}
+
+body a.internal-link {
+  text-decoration: none !important;
+  border-bottom: 1px dashed rgba(78, 168, 222, 0.4);
+  transition: all 0.2s ease;
+}
+
+body a.internal-link:hover {
+  border-bottom-color: #4ea8de;
+  text-shadow: 0 0 12px rgba(78, 168, 222, 0.3);
+}
+
+/* --- Sidebar / File explorer --- */
+
+/* Reduce tree indentation - nuclear override */
+body {
+  --nav-indentation-guide-width: 0px;
+  --indentation-guide-width: 0px;
+  --nav-item-children-padding-left: 10px;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] * {
+  --nav-indentation-guide-width: 0px;
+  --nav-item-children-padding-left: 10px;
+}
+
+.nav-folder-children,
+.tree-item-children,
+.nav-folder > .nav-folder-children,
+.tree-item > .tree-item-children {
+  padding-inline-start: 10px !important;
+  padding-left: 10px !important;
+  margin-inline-start: 0 !important;
+  margin-left: 0 !important;
+}
+
+.nav-folder.mod-root > .nav-folder-children {
+  padding-inline-start: 0 !important;
+  padding-left: 0 !important;
+}
+
+.nav-file-title,
+.nav-folder-title {
+  padding: 2px 4px !important;
+  margin: 0 !important;
+}
+
+body .nav-folder-title {
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+}
+
+body .nav-file-title:hover,
+body .nav-folder-title:hover {
+  background-color: rgba(78, 168, 222, 0.08) !important;
+  border-radius: 6px !important;
+}
+
+body .nav-file-title.is-active,
+body .nav-folder-title.is-active {
+  background-color: rgba(78, 168, 222, 0.12) !important;
+  border-radius: 6px !important;
+  color: #4ea8de !important;
+}
+
+/* Folder collapse indicators */
+body .nav-folder-collapse-indicator {
+  color: rgba(78, 168, 222, 0.5) !important;
+}
+
+/* --- Tables - clean with accent headers --- */
+body .markdown-rendered table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+body .markdown-rendered th {
+  background-color: rgba(78, 168, 222, 0.12) !important;
+  color: #74c7ec !important;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(78, 168, 222, 0.25) !important;
+  padding: 10px 12px !important;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+}
+
+body .markdown-rendered td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  padding: 8px 12px !important;
+}
+
+body .markdown-rendered tr:hover td {
+  background-color: rgba(78, 168, 222, 0.05) !important;
+}
+
+/* --- Checkboxes - sky blue accent --- */
+body input[type="checkbox"] {
+  border-color: rgba(78, 168, 222, 0.4) !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease;
+}
+
+body input[type="checkbox"]:checked {
+  background-color: #4ea8de !important;
+  border-color: #4ea8de !important;
+  box-shadow: 0 0 6px rgba(78, 168, 222, 0.3);
+}
+
+/* Strikethrough completed tasks */
+body .task-list-item[data-task="x"] .task-list-item-checkbox ~ * {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* --- Callouts - enhanced colors --- */
+body .callout[data-callout="info"] {
+  --callout-color: 78, 168, 222;
+}
+
+body .callout[data-callout="tip"] {
+  --callout-color: 166, 227, 161;
+}
+
+body .callout[data-callout="warning"] {
+  --callout-color: 250, 179, 135;
+}
+
+body .callout[data-callout="danger"],
+body .callout[data-callout="bug"] {
+  --callout-color: 243, 139, 168;
+}
+
+body .callout[data-callout="example"] {
+  --callout-color: 203, 166, 247;
+}
+
+body .callout[data-callout="quote"] {
+  --callout-color: 147, 153, 178;
+}
+
+body .callout {
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  border-left-width: 4px !important;
+}
+
+/* --- Scrollbar - slim and blue --- */
+body ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+body ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body ::-webkit-scrollbar-thumb {
+  background: rgba(78, 168, 222, 0.2);
+  border-radius: 4px;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 168, 222, 0.4);
+}
+
+/* --- Frontmatter / Properties --- */
+body .metadata-container {
+  background-color: rgba(78, 168, 222, 0.03) !important;
+  border: 1px solid rgba(78, 168, 222, 0.08) !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+}
+
+/* --- Kanban - glass style --- */
+body .kanban-plugin__board {
+  background: transparent !important;
+}
+
+body .kanban-plugin__lane {
+  background-color: rgba(30, 30, 46, 0.8) !important;
+  border: 1px solid rgba(78, 168, 222, 0.12) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(10px);
+}
+
+body .kanban-plugin__lane-title-text {
+  color: #74c7ec !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+}
+
+body .kanban-plugin__item {
+  background-color: rgba(17, 17, 27, 0.6) !important;
+  border: 1px solid rgba(78, 168, 222, 0.08) !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+}
+
+body .kanban-plugin__item:hover {
+  border-color: rgba(78, 168, 222, 0.25) !important;
+  box-shadow: 0 2px 8px rgba(78, 168, 222, 0.1);
+}
+
+/* --- Dataview - styled tables --- */
+body .dataview.table-view-table th {
+  background-color: rgba(78, 168, 222, 0.12) !important;
+  color: #74c7ec !important;
+  text-transform: uppercase;
+  font-size: 0.82em;
+  letter-spacing: 0.05em;
+}
+
+body .dataview.table-view-table tr:hover td {
+  background-color: rgba(78, 168, 222, 0.05) !important;
+}
+
+/* --- Calendar plugin --- */
+body #calendar-container .day.active {
+  background-color: rgba(78, 168, 222, 0.2) !important;
+  color: #4ea8de !important;
+  border-radius: 6px;
+}
+
+body #calendar-container .day:hover {
+  background-color: rgba(78, 168, 222, 0.1) !important;
+  border-radius: 6px;
+}
+
+body #calendar-container .today {
+  color: #4ea8de !important;
+  font-weight: 700;
+}
+
+/* --- Horizontal rules --- */
+body .markdown-rendered hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(78, 168, 222, 0.3),
+    transparent
+  );
+  margin: 24px 0;
+}
+
+/* --- Selection highlight --- */
+body ::selection {
+  background-color: rgba(78, 168, 222, 0.25) !important;
+}
+
+/* --- Smooth transitions everywhere --- */
+body .nav-file-title,
+body .nav-folder-title,
+body .tag,
+body a.internal-link,
+body a.external-link,
+body .kanban-plugin__item {
+  transition: all 0.15s ease;
+}
+
+/* --- Graph view colors --- */
+body .graph-view.color-fill {
+  color: #4ea8de !important;
+}
+
+body .graph-view.color-line {
+  color: rgba(78, 168, 222, 0.2) !important;
+}
+
+body .graph-view.color-fill-highlight {
+  color: #89dceb !important;
 }
