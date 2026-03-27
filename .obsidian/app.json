@@ -2,5 +2,13 @@
   "newFileLocation": "current",
   "attachmentFolderPath": "Attachments",
   "showLineNumber": true,
-  "spellcheck": true
+  "spellcheck": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showFrontmatter": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "alwaysUpdateLinks": true
 }

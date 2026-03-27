@@ -1,0 +1,203 @@
+/* ===== SKYBLUE CUSTOM THEME ===== */
+
+/* --- Accent colors --- */
+:root {
+  --accent-h: 204;
+  --accent-s: 64%;
+  --accent-l: 58%;
+}
+
+/* --- Headings --- */
+.theme-dark {
+  --h1-color: #4ea8de;
+  --h2-color: #64b5f6;
+  --h3-color: #81c784;
+  --h4-color: #ce93d8;
+  --h5-color: #ffb74d;
+  --h6-color: #ef9a9a;
+}
+
+.markdown-rendered h1,
+.cm-header-1 {
+  color: var(--h1-color) !important;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(78, 168, 222, 0.2);
+  padding-bottom: 6px;
+}
+
+.markdown-rendered h2,
+.cm-header-2 {
+  color: var(--h2-color) !important;
+  font-weight: 600;
+}
+
+.markdown-rendered h3,
+.cm-header-3 {
+  color: var(--h3-color) !important;
+  font-weight: 600;
+}
+
+.markdown-rendered h4,
+.cm-header-4 {
+  color: var(--h4-color) !important;
+}
+
+.markdown-rendered h5,
+.cm-header-5 {
+  color: var(--h5-color) !important;
+}
+
+.markdown-rendered h6,
+.cm-header-6 {
+  color: var(--h6-color) !important;
+}
+
+/* --- Tags with color --- */
+.tag {
+  background-color: rgba(78, 168, 222, 0.15) !important;
+  color: #4ea8de !important;
+  border: 1px solid rgba(78, 168, 222, 0.3) !important;
+  border-radius: 4px !important;
+  padding: 1px 8px !important;
+  font-size: 0.85em !important;
+}
+
+/* --- Blockquotes --- */
+.markdown-rendered blockquote,
+.cm-quote {
+  border-left: 3px solid #4ea8de !important;
+  background-color: rgba(78, 168, 222, 0.05);
+  padding: 4px 12px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- Code blocks --- */
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.markdown-rendered pre {
+  background-color: #1a1b26 !important;
+  border: 1px solid rgba(78, 168, 222, 0.15);
+  border-radius: 8px;
+}
+
+.markdown-rendered code:not(pre code) {
+  background-color: rgba(78, 168, 222, 0.1) !important;
+  color: #7dcfff !important;
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+
+/* --- Checkboxes --- */
+input[type="checkbox"]:checked {
+  background-color: #4ea8de !important;
+  border-color: #4ea8de !important;
+}
+
+/* --- Links --- */
+.theme-dark {
+  --link-color: #4ea8de;
+  --link-color-hover: #7dcfff;
+  --link-external-color: #bb9af7;
+  --link-external-color-hover: #d0b8ff;
+}
+
+/* --- Sidebar / File explorer --- */
+.nav-folder-title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background-color: rgba(78, 168, 222, 0.1) !important;
+  border-radius: 4px;
+}
+
+.nav-folder-title.is-active {
+  background-color: rgba(78, 168, 222, 0.15) !important;
+  border-radius: 4px;
+}
+
+/* --- Tables --- */
+.markdown-rendered table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-rendered th {
+  background-color: rgba(78, 168, 222, 0.15) !important;
+  color: #4ea8de !important;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(78, 168, 222, 0.3) !important;
+}
+
+.markdown-rendered td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.markdown-rendered tr:hover td {
+  background-color: rgba(78, 168, 222, 0.05) !important;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(78, 168, 222, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 168, 222, 0.5);
+}
+
+/* --- Callouts / Admonitions --- */
+.callout[data-callout="info"] {
+  --callout-color: 78, 168, 222;
+}
+
+.callout[data-callout="tip"] {
+  --callout-color: 129, 199, 132;
+}
+
+.callout[data-callout="warning"] {
+  --callout-color: 255, 183, 77;
+}
+
+.callout[data-callout="danger"] {
+  --callout-color: 239, 154, 154;
+}
+
+/* --- Smooth transitions --- */
+.nav-file-title,
+.nav-folder-title,
+.tag,
+a.internal-link,
+a.external-link {
+  transition: all 0.15s ease;
+}
+
+/* --- Kanban improvements --- */
+.kanban-plugin__board {
+  background: transparent !important;
+}
+
+.kanban-plugin__lane {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(78, 168, 222, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+.kanban-plugin__lane-title-text {
+  color: #4ea8de !important;
+  font-weight: 600 !important;
+}
+
+/* --- Dataview tables --- */
+.dataview.table-view-table th {
+  background-color: rgba(78, 168, 222, 0.15) !important;
+  color: #4ea8de !important;
+}

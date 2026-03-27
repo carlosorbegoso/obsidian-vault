@@ -1,1 +1,11 @@
-{}
+{
+  "baseFontSize": 16,
+  "interfaceFontSize": 14,
+  "accentColor": "#4ea8de",
+  "translucency": false,
+  "cssTheme": "",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "skyblue-theme"
+  ]
+}
