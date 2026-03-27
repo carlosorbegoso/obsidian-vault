@@ -1,9 +1,17 @@
 [
   "terminal",
   "obsidian-daily-notes-viewer",
-  "calendar",
   "obsidian-kanban",
   "dataview",
   "templater-obsidian",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-checklist-plugin",
+  "obsidian-day-planner",
+  "obsidian-style-settings",
+  "calendar",
+  "obsidian-excalidraw-plugin",
+  "table-editor-obsidian",
+  "homepage",
+  "tag-wrangler",
+  "obsidian-tracker"
 ]
