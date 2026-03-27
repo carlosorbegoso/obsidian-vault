@@ -136,37 +136,26 @@ body a.internal-link:hover {
 
 /* --- Sidebar / File explorer --- */
 
-/* Reduce tree indentation - nuclear override */
+/* Compact tree - disable indentation guides to fix drift bug */
 body {
+  --nav-item-children-padding-left: 12px;
   --nav-indentation-guide-width: 0px;
-  --indentation-guide-width: 0px;
-  --nav-item-children-padding-left: 10px;
+  --nav-indentation-guide-color: transparent;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] * {
-  --nav-indentation-guide-width: 0px;
-  --nav-item-children-padding-left: 10px;
+/* Kill any inline style padding injected dynamically */
+.nav-folder-children .nav-folder-title[style],
+.nav-folder-children .nav-file-title[style] {
+  padding-left: 4px !important;
 }
 
-.nav-folder-children,
-.tree-item-children,
-.nav-folder > .nav-folder-children,
-.tree-item > .tree-item-children {
-  padding-inline-start: 10px !important;
-  padding-left: 10px !important;
-  margin-inline-start: 0 !important;
-  margin-left: 0 !important;
+.tree-item-children {
+  border-left: none !important;
 }
 
-.nav-folder.mod-root > .nav-folder-children {
-  padding-inline-start: 0 !important;
-  padding-left: 0 !important;
-}
-
-.nav-file-title,
-.nav-folder-title {
+.nav-folder-title,
+.nav-file-title {
   padding: 2px 4px !important;
-  margin: 0 !important;
 }
 
 body .nav-folder-title {

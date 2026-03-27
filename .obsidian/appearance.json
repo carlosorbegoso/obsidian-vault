@@ -4,7 +4,5 @@
   "translucency": false,
   "cssTheme": "Things",
   "theme": "obsidian",
-  "enabledCssSnippets": [
-    "skyblue-theme"
-  ]
+  "enabledCssSnippets": []
 }

@@ -11,5 +11,6 @@
   "foldIndent": true,
   "defaultViewMode": "source",
   "livePreview": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showIndentGuide": false
 }
