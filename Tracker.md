@@ -2,37 +2,23 @@
 
 ---
 
-## Stats
-
-```start-multi-column
-ID: stats
-Number of Columns: 2
-Largest Column: standard
-```
-
-**Commits**
-
+## Commits Summary
 ```tracker
 searchType: frontmatter
 searchTarget: commits
 folder: Daily Notes
 summary:
-    template: "Total: {{sum()}}\nAvg/day: {{average()}}\nBest day: {{max()}}\nDays: {{numTargets()}}"
+    template: "Total: {{sum()}} | Avg/day: {{average()}} | Best day: {{max()}} | Days: {{numTargets()}}"
 ```
 
---- column-end ---
-
-**Hours**
-
+## Hours Summary
 ```tracker
 searchType: frontmatter
 searchTarget: hoursWorked
 folder: Daily Notes
 summary:
-    template: "Total: {{sum()}}\nAvg/day: {{average()}}\nMax: {{max()}}\nDays: {{numTargets()}}"
+    template: "Total: {{sum()}} | Avg/day: {{average()}} | Max: {{max()}} | Days: {{numTargets()}}"
 ```
-
-=== end-multi-column
 
 ---
 
@@ -89,9 +75,7 @@ line:
 
 ---
 
-## Habit Calendars
-
-### Code Review
+## Code Review
 ```tracker
 searchType: task.done
 searchTarget: Code review
@@ -103,7 +87,7 @@ month:
     startWeekOn: Mon
 ```
 
-### Deploy Check
+## Deploy Check
 ```tracker
 searchType: task.done
 searchTarget: Deploy check
@@ -115,7 +99,7 @@ month:
     startWeekOn: Mon
 ```
 
-### Exercise
+## Exercise
 ```tracker
 searchType: task.done
 searchTarget: Exercise
@@ -125,15 +109,4 @@ month:
     headerMonthColor: "#74c7ec"
     dimNotInMonth: true
     startWeekOn: Mon
-```
-
----
-
-## Words Written
-```tracker
-searchType: fileMeta
-searchTarget: numWords
-folder: Daily Notes
-summary:
-    template: "Total words: {{sum()}} | Average per note: {{average()}}"
 ```
