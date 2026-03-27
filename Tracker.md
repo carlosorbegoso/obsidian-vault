@@ -1,103 +1,139 @@
----
-tags:
-  - tracker
----
-
 # Activity Tracker
 
 ---
 
-## Commits per Day
+## Stats
+
+```start-multi-column
+ID: stats
+Number of Columns: 2
+Largest Column: standard
+```
+
+**Commits**
 
 ```tracker
 searchType: frontmatter
 searchTarget: commits
 folder: Daily Notes
-datasetName: Commits
-line:
-  title: "Commits"
-  yAxisLabel: "Commits"
-  lineColor: "#4ea8de"
-  fillGap: true
+summary:
+    template: "Total: {{sum()}}\nAvg/day: {{average()}}\nBest day: {{max()}}\nDays: {{numTargets()}}"
 ```
 
+--- column-end ---
+
+**Hours**
+
+```tracker
+searchType: frontmatter
+searchTarget: hoursWorked
+folder: Daily Notes
+summary:
+    template: "Total: {{sum()}}\nAvg/day: {{average()}}\nMax: {{max()}}\nDays: {{numTargets()}}"
+```
+
+=== end-multi-column
+
 ---
+
+## Commits
+```tracker
+searchType: frontmatter
+searchTarget: commits
+folder: Daily Notes
+line:
+    yAxisLabel: Commits
+    lineColor: "#4ea8de"
+    fillGap: true
+    showPoint: true
+    pointSize: 5
+```
 
 ## Hours Worked
-
 ```tracker
 searchType: frontmatter
 searchTarget: hoursWorked
 folder: Daily Notes
-datasetName: Hours
 line:
-  title: "Hours Worked"
-  yAxisLabel: "Hours"
-  lineColor: "#a6e3a1"
-  fillGap: true
+    yAxisLabel: Hours
+    lineColor: "#a6e3a1"
+    fillGap: true
+    showPoint: true
+    pointSize: 5
 ```
 
----
-
-## Commits Summary
-
+## Commits (Bars)
 ```tracker
 searchType: frontmatter
 searchTarget: commits
 folder: Daily Notes
-summary:
-  template: "Total commits: {{sum}}\nAverage per day: {{average}}\nMax in a day: {{max}}\nDays tracked: {{count}}"
+bar:
+    yAxisLabel: Commits
+    barColor: "#4ea8de"
 ```
 
----
-
-## Hours Summary
-
+## Mood
 ```tracker
 searchType: frontmatter
-searchTarget: hoursWorked
-folder: Daily Notes
-summary:
-  template: "Total hours: {{sum}}\nAverage per day: {{average}}\nMax in a day: {{max}}\nDays tracked: {{count}}"
-```
-
----
-
-## Tasks Completed
-
-```tracker
-searchType: task.done
-searchTarget: ""
+searchTarget: mood
 folder: Daily Notes
 line:
-  title: "Tasks Completed"
-  yAxisLabel: "Tasks"
-  lineColor: "#cba6f7"
-  fillGap: true
+    yAxisLabel: Mood (1-5)
+    lineColor: "#fab387"
+    fillGap: true
+    showPoint: true
+    pointSize: 6
+    yMin: 1
+    yMax: 5
 ```
 
 ---
 
-## Habit Tracker
+## Habit Calendars
 
+### Code Review
 ```tracker
 searchType: task.done
-searchTarget: Code review, Deploy check, Documentation
+searchTarget: Code review
 folder: Daily Notes
-datasetName: Code Review, Deploy Check, Docs
 month:
-  title: "Habits - This Month"
-  color: "#4ea8de"
+    color: "#4ea8de"
+    headerMonthColor: "#74c7ec"
+    dimNotInMonth: true
+    startWeekOn: Mon
+```
+
+### Deploy Check
+```tracker
+searchType: task.done
+searchTarget: Deploy check
+folder: Daily Notes
+month:
+    color: "#a6e3a1"
+    headerMonthColor: "#74c7ec"
+    dimNotInMonth: true
+    startWeekOn: Mon
+```
+
+### Exercise
+```tracker
+searchType: task.done
+searchTarget: Exercise
+folder: Daily Notes
+month:
+    color: "#cba6f7"
+    headerMonthColor: "#74c7ec"
+    dimNotInMonth: true
+    startWeekOn: Mon
 ```
 
 ---
 
-## Notes Created per Day
-
+## Words Written
 ```tracker
 searchType: fileMeta
 searchTarget: numWords
-folder: ""
+folder: Daily Notes
 summary:
-  template: "Total words in vault: {{sum}}\nAverage words per note: {{average}}"
+    template: "Total words: {{sum()}} | Average per note: {{average()}}"
 ```
