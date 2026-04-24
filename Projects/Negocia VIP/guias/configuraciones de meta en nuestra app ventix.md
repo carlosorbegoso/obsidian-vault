@@ -55,31 +55,23 @@ https://business.facebook.com/latest/settings/system_users?business_id=960855130
 
 ### Diagrama general
 
-```
-┌─────────────────────────────────────────────┐
-│         VENTIX (Tech Provider)              │
-│                                             │
-│  ✅ Business Verification                   │
-│  ✅ App Review + Modo Live                  │
-│  ✅ Embedded Signup habilitado              │
-│  ✅ System User (Business Integration)      │
-└──────────────────┬──────────────────────────┘
-                   │ Embedded Signup
-       ┌───────────┼───────────┐
-       ▼           ▼           ▼
-┌────────────┐┌────────────┐┌────────────┐
-│ Cliente 1  ││ Cliente 2  ││ Cliente 3  │
-│            ││            ││            │
-│ MÍNIMO:    ││ MÍNIMO:    ││ MÍNIMO:    │
-│ ✅ Facebook││ ✅ Facebook││ ✅ Facebook│
-│ ✅ Número  ││ ✅ Número  ││ ✅ Número  │
-│ ✅ SMS/Lld ││ ✅ SMS/Lld ││ ✅ SMS/Lld │
-│            ││            ││            │
-│ IDEAL:     ││ IDEAL:     ││ IDEAL:     │
-│ ⭐ BV      ││ ⭐ BV      ││ ⭐ BV      │
-│ (escala    ││ (escala    ││ (escala    │
-│  límites)  ││  límites)  ││  límites)  │
-└────────────┘└────────────┘└────────────┘
+```mermaid
+flowchart TD
+    V["<b>VENTIX (Tech Provider)</b><br/>✅ Business Verification<br/>✅ App Review + Modo Live<br/>✅ Embedded Signup habilitado<br/>✅ System User (Business Integration)"]
+    V -->|Embedded Signup| C1
+    V -->|Embedded Signup| C2
+    V -->|Embedded Signup| C3
+
+    subgraph Clientes
+        C1["<b>Cliente 1</b><br/><br/><b>MÍNIMO:</b><br/>✅ Cuenta Facebook<br/>✅ Número disponible<br/>✅ Verificación SMS/Llamada<br/><br/><b>IDEAL:</b><br/>⭐ Business Verification<br/>(escala límites)"]
+        C2["<b>Cliente 2</b><br/><br/><b>MÍNIMO:</b><br/>✅ Cuenta Facebook<br/>✅ Número disponible<br/>✅ Verificación SMS/Llamada<br/><br/><b>IDEAL:</b><br/>⭐ Business Verification<br/>(escala límites)"]
+        C3["<b>Cliente 3</b><br/><br/><b>MÍNIMO:</b><br/>✅ Cuenta Facebook<br/>✅ Número disponible<br/>✅ Verificación SMS/Llamada<br/><br/><b>IDEAL:</b><br/>⭐ Business Verification<br/>(escala límites)"]
+    end
+
+    style V fill:#4267B2,color:#fff
+    style C1 fill:#f0f4ff,color:#333
+    style C2 fill:#f0f4ff,color:#333
+    style C3 fill:#f0f4ff,color:#333
 ```
 
 ### Flujo de alta de un nuevo número
