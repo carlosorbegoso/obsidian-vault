@@ -5,24 +5,29 @@ created: 2026-04-23
 tags:
   - project
 ---
-Paso 1
+## 1. Configuración inicial (solo se realiza una vez)
+
+### Paso 1
 
 ![[Pasted image 20260423225957.png]]
 
-Paso 2
+### Paso 2
 
 ![[Pasted image 20260423231735.png]]
 
-el toquen permanete se genera con los siguientes pasos
-ingresando al link 
+### Paso 3 — Generar token permanente
+
+El token permanente se genera ingresando al siguiente link:
+
 https://business.facebook.com/latest/settings/system_users?business_id=960855130455533&selected_user_id=61573236428027
 
 ![[Pasted image 20260423232628.png]]
 
-los pasos anteriores se realiza solo una vez. 
+## 2. Creación de nuevo número en nuestra plataforma
 
+### Requisitos del Tech Provider
 
-## 2. Creacion de nuevo numero a nuestra plataforma.
+```
 ┌─────────────────────────────────────────┐
 │ TÚ (Tech Provider)                      │
 │ ✅ Business Verification de TU empresa   │
@@ -30,7 +35,11 @@ los pasos anteriores se realiza solo una vez.
 │ ✅ App en modo Live                      │
 │ ✅ Dominio verificado                    │
 └─────────────────────────────────────────┘
-                    │
+```
+
+### Requisitos por empresa
+
+```
      ┌──────────────┼──────────────┐
      ▼              ▼              ▼
 ┌─────────┐    ┌─────────┐    ┌─────────┐
@@ -45,10 +54,4 @@ los pasos anteriores se realiza solo una vez.
 │ ⭐ BV   │    │ ⭐ BV   │    │ ⭐ BV   │
 │ ⭐ Pago │    │ ⭐ Pago │    │ ⭐ Pago │
 └─────────┘    └─────────┘    └─────────┘
-## Links
-- Repository:
-- Production:
-- Staging:
-
-## Notes
-
+```
