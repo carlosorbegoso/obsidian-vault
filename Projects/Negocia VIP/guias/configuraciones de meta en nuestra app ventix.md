@@ -23,8 +23,28 @@ los pasos anteriores se realiza solo una vez.
 
 
 ## 2. Creacion de nuevo numero a nuestra plataforma.
-
-1. 
+┌─────────────────────────────────────────┐
+│ TÚ (Tech Provider)                      │
+│ ✅ Business Verification de TU empresa   │
+│ ✅ App Review aprobado                   │
+│ ✅ App en modo Live                      │
+│ ✅ Dominio verificado                    │
+└─────────────────────────────────────────┘
+                    │
+     ┌──────────────┼──────────────┐
+     ▼              ▼              ▼
+┌─────────┐    ┌─────────┐    ┌─────────┐
+│Empresa 1│    │Empresa 2│    │Empresa 3│
+│         │    │         │    │         │
+│ MÍNIMO: │    │ MÍNIMO: │    │ MÍNIMO: │
+│ ✅ BM   │    │ ✅ BM   │    │ ✅ BM   │
+│ ✅ Num  │    │ ✅ Num  │    │ ✅ Num  │
+│ ✅ Name │    │ ✅ Name │    │ ✅ Name │
+│         │    │         │    │         │
+│IDEAL:   │    │IDEAL:   │    │IDEAL:   │
+│ ⭐ BV   │    │ ⭐ BV   │    │ ⭐ BV   │
+│ ⭐ Pago │    │ ⭐ Pago │    │ ⭐ Pago │
+└─────────┘    └─────────┘    └─────────┘
 ## Links
 - Repository:
 - Production:
