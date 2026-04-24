@@ -17,9 +17,14 @@ el toquen permanete se genera con los siguientes pasos
 ingresando al link 
 https://business.facebook.com/latest/settings/system_users?business_id=960855130455533&selected_user_id=61573236428027
 
+![[Pasted image 20260423232628.png]]
+
+los pasos anteriores se realiza solo una vez. 
 
 
+## 2. Creacion de nuevo numero a nuestra plataforma.
 
+1. 
 ## Links
 - Repository:
 - Production:
